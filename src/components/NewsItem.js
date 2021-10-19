@@ -4,7 +4,8 @@ import PropTypes from 'prop-types';
 const NewsItem = ({ newsHeadline }) => {
     return (
         <div className="news-card">
-            <div className="flex justify-between">
+            <div className="flex flex-col justify-between">
+                <img src={newsHeadline.urlToImage} alt="" />
                 <h3 className="news-title"><a href={newsHeadline.url} target="_blank" rel="noreferrer" >{newsHeadline.title}</a></h3>
             </div>
             <p
