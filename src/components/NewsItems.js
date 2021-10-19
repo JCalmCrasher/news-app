@@ -1,11 +1,14 @@
 import NewsItem from "./NewsItem";
 
-const NewsItems = () => {
+const NewsItems = ({ newsHeadlines }) => {
     return (
         <div className="news-card__wrapper">
-            <NewsItem />
-            <NewsItem />
-            <NewsItem />
+            {newsHeadlines.map((newsHeadline, index) => (
+                <NewsItem
+                    key={index}
+                    newsHeadline={newsHeadline}
+                />
+            ))}
         </div>
     )
 }
